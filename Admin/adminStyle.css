@@ -1,0 +1,71 @@
+* {
+}
+
+body {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+}
+
+.content {
+    /*display: flex;*/
+}
+
+.row {
+    margin-bottom: 0.2em;
+}
+
+.scroller {
+    max-height: 30em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px gray solid;
+    padding: 1em;
+}
+
+.scroller ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0px;
+}
+
+.scroller li {
+    /*margin-bottom: 0.2em;*/
+}
+
+.button {
+    border: 1px solid black;
+    border-radius: 0.1em;
+    padding: 0.1em;
+    
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: silver;
+    text-shadow: black 1px 1px;
+    font-family: Arial;
+    font-size: 0.8em;
+    margin: 1px;
+}
+
+a.button:active {
+    text-shadow: none;
+}
+
+form {
+    marigin: 0;
+}
+
+form#deleteForm input[type="text"]
+{
+    background-color: pink;
+/*    border-bottom-color: red;*/
+}
+
+.search
+{
+    float: right;
+}
