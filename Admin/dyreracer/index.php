@@ -15,7 +15,7 @@
 </div>
 <div class="content">
     <div class="row">
-        <a href="opret.php" class="button">Opret ny dyrerace</a>
+        <a href="opret.php" class="button">Opret ny dyreart</a>
         <div class='search'>
             <input type="text" name="searchString" disabled >
             <input type="submit" name="search" value="Søg" disabled>
@@ -31,7 +31,7 @@
                 
                 $con = mysqli_connect($host, $user, $password, $database);
                 
-                $sql = "SELECT * FROM dyreracer ORDER BY id ASC";
+                $sql = "SELECT * FROM dyreart ORDER BY id ASC";
                 $query = mysqli_query($con, $sql);
                 
                 while ($row = mysqli_fetch_assoc($query)) 

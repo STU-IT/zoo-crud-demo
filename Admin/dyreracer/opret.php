@@ -38,7 +38,7 @@ $post = filter_input_array(INPUT_POST, $formArgs);
  ****************************************************************************/
 if (isset($post['action']) && $post['action'] == 'Opret')
 {
-    $sql = "INSERT INTO dyreracer (navn) VALUES ('$post[navn]')";
+    $sql = "INSERT INTO dyreart (navn) VALUES ('$post[navn]')";
     $query = mysqli_query($con, $sql) OR die($sql ."<br>\n" .mysqli_error($con));
     
     header('Location: ./');

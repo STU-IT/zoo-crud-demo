@@ -37,7 +37,7 @@ $post = filter_input_array(INPUT_POST, $formArgs);
  ****************************************************************************/
 if (isset($post['action']) && $post['action'] == 'Gem')
 {
-    $sql = "UPDATE dyreracer SET navn = '$post[navn]' WHERE id = '$post[id]'";
+    $sql = "UPDATE dyreart SET navn = '$post[navn]' WHERE id = '$post[id]'";
     $query = mysqli_query($con, $sql);
     header('Location: ./');
 }
@@ -51,7 +51,7 @@ $sanitizeId =  filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 if( filter_var($sanitizeId, FILTER_VALIDATE_INT) )
 {
 
-    $sql = "SELECT * FROM dyreracer WHERE id = $sanitizeId";
+    $sql = "SELECT * FROM dyreart WHERE id = $sanitizeId";
     $query = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($query);
 }
