@@ -43,6 +43,7 @@
                 <a href="rediger.php?id=<?php echo $row['id'] ?>">
                     <?php echo $row['navn'] ?>
                 </a>
+                <?php echo $row['opretDato'] ?>
                 <img src="../../images/thumbs/<?php echo $row['billede'] ?>"
             </li>   
             

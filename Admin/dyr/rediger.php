@@ -126,6 +126,10 @@ if( filter_var($sanitizeId, FILTER_VALIDATE_INT) )
             <input type="text" name="chipid" value="<?php echo $row['chipid'] ?>" >
         </p>
         <p>
+            <span class="label">Date:</span>
+            <input type="datetime" readonly="true" name="opretDato" value="<?php echo $row['opretDato'] ?>" >
+        </p>
+        <p>
             <span class="label">Billede:</span> 
             <input type="file" name="billede" > <img src="../../images/thumbs/<?php echo $row['billede'] ?>" >
         </p>
