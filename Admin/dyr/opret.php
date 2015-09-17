@@ -15,6 +15,7 @@ $con = mysqli_connect($host, $user, $password, $database);
  * 
  * Filtrering af form input, for en sikkerheds skyld
  * 
+ * Læs mere om filtre i php på http://php.net/manual/en/book.filter.php
  ****************************************************************************/
 $formArgs = array(
 //    'id'        =>  array(  'filter'    =>  FILTER_SANITIZE_NUMBER_INT,
@@ -50,6 +51,9 @@ if (isset($post['action']) && $post['action'] == 'Opret')
  * 
  * Håndtér billede til upload
  * 
+ * Se mere om WideImage på http://wideimage.sourceforge.net/ 
+ * og http://wideimage.sourceforge.net/examples/basic/
+ * 
  ****************************************************************************/
     
 //var_dump($_FILES);
@@ -57,6 +61,7 @@ if (isset($post['action']) && $post['action'] == 'Opret')
     {
         $billedeNavn = uniqid($_FILES['billede']['name'], TRUE).'.png'; // et unikt id med filnavnet som prefix, og extra entropi
 
+        // Se mere om WideImage på http://wideimage.sourceforge.net/ og http://wideimage.sourceforge.net/examples/basic/
         require_once '../../includes/wideimage/lib/WideImage.php';
         $img = WideImage::loadFromUpload('billede');
         $thumb = $img->resize(100, 75, 'outside')->crop('center', 'center', 100, 75);
