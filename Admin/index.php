@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if ( empty($_SESSION['userid']) )
+    {
+        // skrid pomfrit, det er en lukket fest
+        header("Location: ../login.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
