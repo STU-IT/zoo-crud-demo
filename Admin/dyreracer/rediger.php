@@ -15,6 +15,7 @@ $con = mysqli_connect($host, $user, $password, $database);
 /*****************************************************************************
  * 
  * Filtrering af form input, for en sikkerheds skyld
+ * Se manualen: http://php.net/manual/en/filter.filters.php
  * 
  ****************************************************************************/
 $formArgs = array(
